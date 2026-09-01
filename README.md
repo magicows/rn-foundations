@@ -17,6 +17,8 @@ This repository is intended to complement, not replace:
 
 No package registry publication is required. Once this repository is pushed to GitHub, install directly from it:
 
+The current `skills` CLI requires Node.js 22.20 or later. Switch Node versions before running these commands if the project itself uses an older release.
+
 ```bash
 npx skills@latest add <github-owner>/react-native-foundations \
   --skill react-native-runtime-debugging \
@@ -49,6 +51,7 @@ npx skills@latest add . \
 
 ## Requirements
 
+- Node.js 22.20 or later for the current `skills` CLI
 - Node.js 22 or later for CDP inspection
 - Metro running for Metro/CDP probes
 - Xcode command-line tools for iOS Simulator logs
