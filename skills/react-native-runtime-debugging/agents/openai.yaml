@@ -1,0 +1,4 @@
+interface:
+  display_name: "React Native Runtime Debugging"
+  short_description: "Inspect Metro, logs, React trees, network activity, and HMR."
+  default_prompt: "Use $react-native-runtime-debugging to diagnose this React Native runtime issue."
