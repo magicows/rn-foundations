@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Simulator Control"
+  short_description: "Control and inspect a booted iOS Simulator."
+  default_prompt: "Use $ios-simulator-control to inspect and interact with the booted iOS Simulator."
