@@ -2,11 +2,15 @@
 
 Portable Agent Skills for diagnosing and improving React Native applications. Each skill is independently installable and contains its own scripts and references—no Claude plugin manifest, machine-global helper files, or copied React Native documentation is required.
 
-## Included skill
+## Included skills
 
 ### `react-native-runtime-debugging`
 
 Inspect Metro health, JavaScript and native logs, CDP targets, React component trees, network activity, bundle responses, stack symbolication, and HMR events for running React Native and Expo development builds.
+
+### `ios-simulator-control`
+
+Inspect and control a booted iOS Simulator with self-contained wrappers around `xcrun simctl` and AXe. It supports screenshots, recordings, accessibility inspection, taps, typing, swipes, app installation, and app launching.
 
 This repository is intended to complement, not replace:
 
@@ -21,7 +25,7 @@ The current `skills` CLI requires Node.js 22.20 or later. Switch Node versions b
 
 ```bash
 npx skills@latest add <github-owner>/react-native-foundations \
-  --skill react-native-runtime-debugging \
+  --skill react-native-runtime-debugging ios-simulator-control \
   --agent codex \
   --yes
 ```
@@ -30,7 +34,7 @@ To install it globally for Codex:
 
 ```bash
 npx skills@latest add <github-owner>/react-native-foundations \
-  --skill react-native-runtime-debugging \
+  --skill react-native-runtime-debugging ios-simulator-control \
   --agent codex \
   --global \
   --copy \
@@ -43,7 +47,7 @@ Test a local checkout before pushing:
 
 ```bash
 npx skills@latest add . \
-  --skill react-native-runtime-debugging \
+  --skill react-native-runtime-debugging ios-simulator-control \
   --agent codex \
   --copy \
   --yes
@@ -55,6 +59,7 @@ npx skills@latest add . \
 - Node.js 22 or later for CDP inspection
 - Metro running for Metro/CDP probes
 - Xcode command-line tools for iOS Simulator logs
+- AXe for iOS Simulator accessibility inspection and UI interaction
 - Android platform tools for Android logs
 
 ## Validate changes
@@ -67,4 +72,4 @@ Set `SKILL_VALIDATOR` to a compatible `quick_validate.py` path to include Agent 
 
 ## Attribution
 
-The runtime helper scripts and Metro endpoint reference were adapted from `react-native-foundations.skill`. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+The runtime and iOS Simulator helpers were adapted from `react-native-foundations.skill`. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

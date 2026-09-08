@@ -7,5 +7,10 @@ The following files were adapted from [`ryanthedev/react-native-foundations.skil
 - `skills/react-native-runtime-debugging/scripts/cdp-bridge.js`
 - `skills/react-native-runtime-debugging/scripts/hmr.sh`
 - `skills/react-native-runtime-debugging/references/metro-endpoints.md`
+- `skills/ios-simulator-control/scripts/app.sh`
+- `skills/ios-simulator-control/scripts/capture.sh`
+- `skills/ios-simulator-control/scripts/device.sh`
+- `skills/ios-simulator-control/scripts/ui.sh`
+- `skills/ios-simulator-control/references/troubleshooting.md`
 
 The source project declares the MIT license in its plugin manifest. These adaptations remain available under the repository's MIT license, and existing source comments have been retained.
